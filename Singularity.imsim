@@ -3,6 +3,7 @@ From: lsstdesc/stack-sims:w_2018_26-sims_2_9_0
 
 %post
    set +e
+   yum install -y time
    source scl_source enable devtoolset-6
    set -e
    source /opt/lsst/software/stack/loadLSST.bash
