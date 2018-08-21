@@ -1,0 +1,26 @@
+Bootstrap: docker
+From: lsstdesc/stack-sims:w_2018_26-sims_2_9_0
+
+%post
+   set +e
+   source scl_source enable devtoolset-6
+   set -e
+   source /opt/lsst/software/stack/loadLSST.bash
+   setup lsst_distrib
+   mkdir /DC2
+   cd /DC2
+   git clone https://github.com/lsst/obs_lsstCam.git
+   cd obs_lsstCam
+   git checkout u/boutigny/DC2-2018-08-13
+   setup -r . -j
+   scons
+   cd ../..
+ 
+
+%environment
+   source /opt/lsst/software/stack/loadLSST.bash
+   setup lsst_distrib
+   cd /DC2
+   setup -r obs_lsstCam -j
+   cd
+   export OMP_NUM_THREADS=1
