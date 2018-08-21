@@ -3,6 +3,7 @@ From: lsstsqre/centos:7-stack-lsst_distrib-w_2018_30
 
 %post
    set +e
+   yum install -y time
    source scl_source enable devtoolset-6
    set -e
    source /opt/lsst/software/stack/loadLSST.bash
