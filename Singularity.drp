@@ -1,5 +1,6 @@
 Bootstrap: docker
 From: lsstsqre/centos:7-stack-lsst_distrib-w_2018_30
+# DRP Singularity Image
 
 %post
    set +e
