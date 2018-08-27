@@ -12,7 +12,7 @@ From: lsstsqre/centos:7-stack-lsst_distrib-w_2018_30
    cd /DC2
    git clone https://github.com/lsst/obs_lsstCam.git
    cd obs_lsstCam
-   git checkout u/boutigny/DC2-2018-08-13
+   git checkout w.2018.30-run1.2i
    setup -r . -j
    scons
    cd ../..
