@@ -16,6 +16,10 @@ From: lsstsqre/centos:7-stack-lsst_distrib-w_2018_30
    git checkout w.2018.30-run1.2i
    setup -r . -j
    scons
+   cd ..
+   git clone https://github.com/LSSTDESC/ImageProcessingPipelines.git
+   cd ImageProcessingPipelines
+   git checkout u/heather999/dev
    cd ../..
  
 
