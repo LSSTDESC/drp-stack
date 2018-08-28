@@ -31,6 +31,7 @@ From: lsstdesc/stack-sims:w_2018_26-sims_2_9_0
    setup lsst_sims
    cd /DC2
    setup -r imSim -j
+   setup -r desc_sim_utils -j
    cd
    export OMP_NUM_THREADS=1
 
