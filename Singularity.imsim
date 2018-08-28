@@ -17,6 +17,12 @@ From: lsstdesc/stack-sims:w_2018_26-sims_2_9_0
    git checkout u/jchiang/fix_raw_file_packager
    setup -r . -j
    scons
+   cd ..
+   git clone https://github.com/LSSTDESC/desc_sim_utils
+   cd desc_sim_utils
+   git checkout u/jchiang/imsim_calib_scripts
+   setup -r . -j
+   scons
    cd ../..
  
 
